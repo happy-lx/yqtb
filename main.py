@@ -102,7 +102,6 @@ if __name__ == "__main__":
     user = "xxxxxxxxxx"
     passwd = "xxxxxxxxxx"
     drive_path = "/usr/bin/chromedriver"
-    # drive_path = "E:/Selenium/chromedriver_win32/chromedriver.exe"
     log_file_path = "./auto_upload.log"
     smtp_server = ""
     smtp_port = ""

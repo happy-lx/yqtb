@@ -1,7 +1,7 @@
 # yqtb
 使用方法：
 + `fork`这个仓库
-+ fork的仓库 -> `action` -> 打开workflow(记得点enable workflow这个按钮)
++ fork的仓库 -> `action` -> 打开workflow(**记得点enable workflow这个按钮**)
 + fork的仓库 -> `settings` -> secret -> 设置以下secret
     + `USER_NAME` 翱翔门户账号
     + `PASSWD` 翱翔门户密码
