@@ -128,7 +128,7 @@ if __name__ == "__main__":
         send_email(sender_email,sender_email_passwd,receiver_email,"robot","疫情填报成功",smtp_port,smtp_server)
 
     except Exception as ex:
-        print("填报失败，请手动检查，系统时间： ",time.strftime("%Y-%m-%d-%H-%M",time.localtime(time.time())))
+        print("填报失败，请手动检查，系统时间： ",time.strftime("%Y-%m-%d-%H-%M",time.localtime(time.time())),ex)
         send_email(sender_email, sender_email_passwd, receiver_email, "robot", "疫情填报失败，请手动检查", smtp_port, smtp_server)
         with open(log_file_path, "a+") as file:
             file.write("填报失败，请手动检查 系统时间："+time.strftime("%Y-%m-%d-%H-%M",time.localtime(time.time()))+"\n")
