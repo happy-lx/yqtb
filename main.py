@@ -12,7 +12,14 @@ class Browser:
 
     def __init__(self,userid,userpassword,driver_path,log_file_path):
         chrome_options = Options()
-        chrome_options.add_argument('window-size=1920x3000')  # 指定浏览器分辨率
+        
+        chrome_options.addArguments("enable-automation");
+        chrome_options.addArguments("--window-size=1920,1080");
+        chrome_options.addArguments("--no-sandbox");
+        chrome_options.addArguments("--disable-extensions");
+        chrome_options.addArguments("--dns-prefetch-disable");
+        chrome_options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        
         chrome_options.add_argument('--disable-gpu')  # 谷歌文档提到需要加上这个属性来规避bug
         chrome_options.add_argument('--hide-scrollbars')  # 隐藏滚动条, 应对一些特殊页面
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 不加载图片, 提升速度
